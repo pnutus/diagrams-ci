@@ -42,6 +42,10 @@ REPOS=(
   'force-layout'
   )
 
+mkdir build-tmp
+cd build-tmp
+ln -s ../stack.yaml .
+
 for repo in "${REPOS[@]}"; do
   git clone https://github.com/diagrams/$repo
 done
